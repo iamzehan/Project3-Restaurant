@@ -1,16 +1,17 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-:root{
-    --bgc: rebeccapurple;
-    --font-color: canvas;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: var(--bgc);
-    color: var(--font-color);
-    display: flex;
-    justify-content: center;
+:root {
+  --bgc: rebeccapurple;
+  --font-color: canvas;
+}
+
+body {
+  background-color: var(--bgc);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
 }
