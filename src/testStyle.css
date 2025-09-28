@@ -43,7 +43,7 @@ header {
     color: canvas;
     text-align: center;
     padding: 0.5rem 1rem;
-
+    transition: 0.4s color ease;
     &:hover {
       color: red;
     }
