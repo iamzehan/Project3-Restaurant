@@ -1,0 +1,151 @@
+{
+  "coffee_shop": "Brew & Bean",
+  "menu": {
+    "coffee": [
+      {
+        "id": 1,
+        "name": "Espresso",
+        "size": ["single", "double"],
+        "price": {
+          "single": 2.50,
+          "double": 3.50
+        },
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrjyHlkViXf1t9FlpAnmlozT9DZSvPbFi-Lg&s"
+      },
+      {
+        "id": 2,
+        "name": "Americano",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 3.00,
+          "medium": 3.50,
+          "large": 4.00
+        },
+        "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+      },
+      {
+        "id": 3,
+        "name": "Cappuccino",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 3.50,
+          "medium": 4.00,
+          "large": 4.50
+        },
+        "image_url": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+      },
+      {
+        "id": 4,
+        "name": "Latte",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 3.75,
+          "medium": 4.25,
+          "large": 4.75
+        },
+        "flavors": ["vanilla", "caramel", "hazelnut", "mocha"],
+        "image_url": "https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw42dcae51/images/recipe-Images/cafe-latte1-recipe_resized.jpg?sw=1200&sh=1200&sm=fit"
+      },
+      {
+        "id": 5,
+        "name": "Macchiato",
+        "size": ["single", "double"],
+        "price": {
+          "single": 3.25,
+          "double": 4.25
+        },
+        "image_url": "https://images.unsplash.com/photo-1541167760496-1628856ab772"
+      },
+      {
+        "id": 6,
+        "name": "Flat White",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 3.75,
+          "medium": 4.25,
+          "large": 4.75
+        },
+        "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+      },
+      {
+        "id": 7,
+        "name": "Mocha",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 4.00,
+          "medium": 4.50,
+          "large": 5.00
+        },
+        "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+      },
+      {
+        "id": 8,
+        "name": "Cold Brew",
+        "size": ["small", "medium", "large"],
+        "price": {
+          "small": 3.50,
+          "medium": 4.00,
+          "large": 4.75
+        },
+        "image_url": "https://images.unsplash.com/photo-1517705008128-361805f42e86"
+      },
+      {
+        "id": 9,
+        "name": "Frappuccino",
+        "size": ["medium", "large"],
+        "price": {
+          "medium": 4.75,
+          "large": 5.50
+        },
+        "flavors": ["mocha", "caramel", "java chip", "strawberries & cream"],
+        "image_url": "https://lonegoosebakery.com/wp-content/uploads/2025/04/main-caramel-frappuccino-image-500x375.jpg"
+      }
+    ],
+    "tea": [
+      {
+        "id": 10,
+        "name": "Green Tea",
+        "price": 2.50,
+        "image_url": "https://images.unsplash.com/photo-1505575967455-40e256f73376"
+      },
+      {
+        "id": 11,
+        "name": "Chai Latte",
+        "price": 3.50,
+        "image_url": "https://bakingmischief.com/wp-content/uploads/2022/10/dirty-chai-latte-image-square.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Earl Grey",
+        "price": 2.75,
+        "image_url": "https://images.unsplash.com/photo-1528825871115-3581a5387919"
+      }
+    ],
+    "pastries": [
+      {
+        "id": 13,
+        "name": "Croissant",
+        "price": 2.25,
+        "image_url": "https://images.unsplash.com/photo-1523983308075-3d141b07aa1d"
+      },
+      {
+        "id": 14,
+        "name": "Muffin",
+        "flavors": ["blueberry", "chocolate chip", "banana nut"],
+        "price": 2.75,
+        "image_url": "https://images.unsplash.com/photo-1590080876432-76a6d1e6d8ef"
+      },
+      {
+        "id": 15,
+        "name": "Bagel",
+        "options": ["plain", "sesame", "everything"],
+        "price": 2.00,
+        "add_ons": {
+          "cream_cheese": 0.75,
+          "butter": 0.50
+        },
+        "image_url": "https://images.unsplash.com/photo-1523983308075-3d141b07aa1d"
+      }
+    ]
+  }
+}
