@@ -19,7 +19,6 @@ const createCard = (key, values) => {
     if (typeof value.price === "number") {
       price.textContent = value.price;
     } else {
-      console.log(value);
       value.size.forEach((size) => {
         const div = document.createElement("div");
         const h5 = document.createElement("h5");

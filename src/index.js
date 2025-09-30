@@ -1,4 +1,4 @@
-import "./testStyle.css";
+import "./style.css";
 import Home from "./components/Home/index.js";
 import Menu from "./components/Menu/index.js";
 
