@@ -126,14 +126,14 @@
         "id": 13,
         "name": "Croissant",
         "price": 2.25,
-        "image_url": "https://images.unsplash.com/photo-1523983308075-3d141b07aa1d"
+        "image_url": "https://sarahsvegankitchen.com/wp-content/uploads/2024/05/Vegan-Croissants-1.jpg"
       },
       {
         "id": 14,
         "name": "Muffin",
         "flavors": ["blueberry", "chocolate chip", "banana nut"],
         "price": 2.75,
-        "image_url": "https://images.unsplash.com/photo-1590080876432-76a6d1e6d8ef"
+        "image_url": "https://sugargeekshow.com/wp-content/uploads/2019/10/chocolate-chip-muffins-featured.jpg"
       },
       {
         "id": 15,
@@ -144,7 +144,7 @@
           "cream_cheese": 0.75,
           "butter": 0.50
         },
-        "image_url": "https://images.unsplash.com/photo-1523983308075-3d141b07aa1d"
+        "image_url": "https://bakerbettie.com/wp-content/uploads/2016/03/new-york-bagels-square-2-735x735.jpg"
       }
     ]
   }
