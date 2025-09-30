@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
+
+.carousel {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+}
+.carousel > ul {
+  width: 50%;
+  anchor-name: --carousel;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+  padding: 1rem 2rem;
+  gap: 1em;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
+  &::scroll-marker-group {
+    anchor-name: --scoller;
+    display: grid;
+    grid-auto-flow: column;
+    grid-area: markers;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > li {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    scroll-snap-align: center;
+    list-style: none;
+    box-shadow: 0 5px 15px 1px rgba(156, 155, 155, 0.25);
+    border-radius: 0.5rem;
+    border: 1px solid;
+    text-align: center;
+
+    > img {
+      height: 50%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    > :not(img) {
+      padding: 0 1em;
+    }
+    > .price {
+      display: flex;
+      justify-content: space-between;
+      background-color: lightgreen;
+      margin: 0 0.5em;
+      padding: 0.5em 1.5em;
+      border-radius: 0.5em;
+      color: black;
+      position: relative;
+      font-weight: bold;
+    }
+    > .price > * {
+        z-index: 2;
+    }
+    > .price::before{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        content: 'paid';
+        width: 100%;
+        height: 100%;
+        font-family: "Material Symbols Outlined";
+        font-size: 2rem;
+        font-weight: bolder;
+        top: 0;
+        left: 0;
+        color: green;
+        opacity: 0.5;
+        z-index: 1;
+    }
+  }
+
+  > li::scroll-marker {
+    content: "";
+    padding: 0.5rem;
+    height: 0.5px !important;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid canvas;
+    transform: scale(0.5);
+  }
+
+  > li::scroll-marker:target-current {
+    background: canvas;
+    transform: scale(0.8);
+    transition: 0.3s transform ease-in-out;
+  }
+  li:target-current {
+    transform: scale(1.4);
+  }
+}
