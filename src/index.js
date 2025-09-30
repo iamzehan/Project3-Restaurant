@@ -1,23 +1,41 @@
-import './testStyle.css';
+import "./testStyle.css";
+import Home from "./components/Home/index.js";
 
-const content = document.querySelector("#content");
+function main() {
+  const content = document.querySelector("#content");
 
-const buttons = document.querySelectorAll("button");
+  // Create page loader function
+  const loadPage = (pageName, clicked = false) => {
+    content.innerHTML = "";
+    if (pageName == "Home") {
+      Home.forEach((item) => content.appendChild(item));
+    }
+    if (clicked) {
+      console.log(`${pageName} was clicked!`);
+    }
+  };
 
-buttons.forEach((button)=> {
+  // Load home page on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    loadPage("Home");
+  });
+
+  // get all the buttons
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
     button.classList.add("icon");
-})
-
-const mainIcon = document.createElement("span");
-mainIcon.classList.add("icon");
-mainIcon.textContent = 'chef_hat';
-content.appendChild(mainIcon);
-const headline = document.createElement("h2");
-headline.classList.add("headline");
-headline.textContent = "Welcome to Restoura";
-content.appendChild(headline);
-const description = document.createElement("p");
-content.appendChild(description);
-
-
-
+    // add events to navigation buttons
+    button.addEventListener("click", (e) => {
+      buttons.forEach((button) => {
+        if (button.textContent === e.target.textContent) {
+          button.classList.add("active");
+        } else {
+          button.classList.remove("active");
+        }
+      });
+      loadPage(button.textContent, true);
+    });
+  });
+}
+main();
