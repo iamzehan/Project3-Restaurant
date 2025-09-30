@@ -26,9 +26,16 @@ function main() {
   buttons.forEach((button) => {
     button.classList.add("icon");
     // add events to navigation buttons
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      buttons.forEach((button) => {
+        if (button.textContent === e.target.textContent) {
+          button.style.color = "red";
+        } else {
+          button.style.color = "white";
+        }
+      });
       loadPage(button.textContent, true);
     });
   });
 }
- main();
+main();
