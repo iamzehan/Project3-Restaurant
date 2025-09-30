@@ -47,6 +47,9 @@ header {
     &:hover {
       color: red;
     }
+    &.home{
+    color: red;
+  }
   }
 }
 
