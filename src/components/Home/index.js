@@ -8,3 +8,6 @@ headline.classList.add("headline");
 headline.textContent = "Welcome to Restoura";
 export const description = document.createElement("p");
 
+const Home = [mainIcon, headline, description];
+
+export default Home;
