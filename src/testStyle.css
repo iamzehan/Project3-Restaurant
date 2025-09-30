@@ -19,8 +19,10 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   font-family: var(--default-font);
 }
+
 /* All icons setting */
 .icon {
   font-family: var(--icofont);

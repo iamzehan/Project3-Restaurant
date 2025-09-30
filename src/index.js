@@ -9,10 +9,10 @@ function main() {
   const loadPage = (pageName, clicked = false) => {
     content.innerHTML = "";
     if (pageName == "Home") {
-      Home.forEach((item) => content.appendChild(item));
+      content.appendChild(Home);
     }
     if (pageName == "Menu") {
-      Menu.forEach((item) => content.appendChild(item));
+      content.appendChild(Menu);
     }
   };
 
