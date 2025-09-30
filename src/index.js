@@ -3,7 +3,10 @@ import Home from './components/Home/index.js';
 
 const content = document.querySelector("#content");
 
-Home.forEach((item)=> content.appendChild(item) );
+document.addEventListener("DOMContentLoaded", function(){
+    Home.forEach((item)=> content.appendChild(item) );
+})
+
 
 const buttons = document.querySelectorAll("button");
 
