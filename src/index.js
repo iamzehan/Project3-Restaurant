@@ -1,5 +1,6 @@
 import "./testStyle.css";
 import Home from "./components/Home/index.js";
+import Menu from "./components/Menu/index.js";
 
 function main() {
   const content = document.querySelector("#content");
@@ -10,8 +11,8 @@ function main() {
     if (pageName == "Home") {
       Home.forEach((item) => content.appendChild(item));
     }
-    if (clicked) {
-      console.log(`${pageName} was clicked!`);
+    if (pageName == "Menu") {
+      Menu.forEach((item) => content.appendChild(item));
     }
   };
 
