@@ -6,7 +6,7 @@ function main() {
   const content = document.querySelector("#content");
 
   // Create page loader function
-  const loadPage = (pageName, clicked = false) => {
+  const loadPage = (pageName) => {
     content.innerHTML = "";
     if (pageName == "Home") {
       content.appendChild(Home);
@@ -35,7 +35,7 @@ function main() {
           button.classList.remove("active");
         }
       });
-      loadPage(button.textContent, true);
+      loadPage(button.textContent);
     });
   });
 }
