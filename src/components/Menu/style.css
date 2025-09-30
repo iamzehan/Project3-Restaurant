@@ -2,21 +2,22 @@
 
 
 .carousel {
+  width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  min-width: max-content;
   color: white;
 }
 .carousel > ul {
-  max-width: 40%;
+  width: 50%;
   anchor-name: --carousel;
   box-sizing: border-box;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 33%;
+  grid-auto-columns: 30%;
   padding: 1rem 2rem;
   gap: 1em;
   overflow-x: hidden;
@@ -39,6 +40,8 @@
   > li {
     height: 300px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
     justify-self: center;
     scroll-snap-align: center;
     list-style: none;
@@ -90,7 +93,6 @@
   }
 
   > li::scroll-marker {
-    
     content: "";
     padding: 0.5rem;
     height: 0.5px !important;
