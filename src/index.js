@@ -29,9 +29,9 @@ function main() {
     button.addEventListener("click", (e) => {
       buttons.forEach((button) => {
         if (button.textContent === e.target.textContent) {
-          button.style.color = "red";
+          button.classList.add(".active");
         } else {
-          button.style.color = "white";
+          button.classList.remove(".active");
         }
       });
       loadPage(button.textContent, true);
