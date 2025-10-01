@@ -1,6 +1,8 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -18,12 +20,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+   new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.html$/i,
@@ -34,5 +37,12 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+    optimization: {
+    minimizer: [
+      // For webpack v5, you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line // `...`,
+      new CssMinimizerPlugin(),
+    ],
+    minimize: true,
   },
 };
