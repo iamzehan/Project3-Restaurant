@@ -11,7 +11,6 @@ const priceProcessor = (value,price) => {
     h6.textContent = value.price;
     div.appendChild(h5);
     div.appendChild(h6);
-    console.log(typeof div);
     price.appendChild(div);
   } else {
     value.size.forEach((size) => {
@@ -23,7 +22,6 @@ const priceProcessor = (value,price) => {
       h6.textContent = value.price[size];
       div.appendChild(h5);
       div.appendChild(h6);
-      console.log(typeof div);
       price.appendChild(div);
     });
   }
