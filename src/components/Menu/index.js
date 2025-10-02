@@ -1,9 +1,9 @@
 import "./style.css";
 import Data from "./menu.json";
 
-const createCard = (value, list) => {
-  function arrangePrice(classType, category, price) {
-    const div = document.createElement("div");
+const createCard = (value, li) => {
+
+  function arrangePrice(classType, category, price, div) {
     div.classList.add(classType);
     const h5 = document.createElement("h5");
     const h6 = document.createElement("h6");
@@ -11,11 +11,7 @@ const createCard = (value, list) => {
     h6.textContent = price;
     div.appendChild(h5);
     div.appendChild(h6);
-    return div;
   }
-  
-  const li = document.createElement("li");
-  li.id = value.id;
 
   const img = document.createElement("img");
   img.src = value.image_url;
@@ -29,25 +25,28 @@ const createCard = (value, list) => {
   price.classList.add("price");
 
   if (typeof value.price === "number") {
-    let div = arrangePrice("single", "Price", value.price);
+    const div = document.createElement("div");
+    arrangePrice("single", "Price", value.price, div);
     price.appendChild(div);
   } else {
     value.size.forEach((size) => {
-      let div = arrangePrice("multiple", size, value.price[size]);
+      const div = document.createElement("div");
+      arrangePrice("multiple", size, value.price[size], div);
       price.appendChild(div);
     });
   }
-
   li.appendChild(price);
-
-  list.appendChild(li);
+  return li;
 };
 
 const createMenu = (key, values) => {
   const list = document.createElement("ul");
   list.classList.add(key);
   values.forEach((value) => {
-    createCard(value, list);
+    const li = document.createElement("li");
+    li.id = value.id;
+    createCard(value, li);
+    list.appendChild(li);
   });
   return list;
 };
