@@ -13,14 +13,24 @@ const createCard = (key, values) => {
     h2.textContent = value.name;
     li.appendChild(img);
     li.appendChild(h2);
-    const price = document.createElement("span");
+    const price = document.createElement("div");
     price.classList.add("price");
     li.appendChild(price);
+    
     if (typeof value.price === "number") {
-      price.textContent = value.price;
+      const div = document.createElement("div");
+      div.classList.add("single");
+      const h5 = document.createElement("h5");
+      const h6 = document.createElement("h6");
+      h5.textContent = "Price";
+      h6.textContent = value.price;
+      div.appendChild(h5);
+      div.appendChild(h6);
+      price.appendChild(div);
     } else {
       value.size.forEach((size) => {
         const div = document.createElement("div");
+        div.classList.add("multiple");
         const h5 = document.createElement("h5");
         const h6 = document.createElement("h6");
         h5.textContent = size;
