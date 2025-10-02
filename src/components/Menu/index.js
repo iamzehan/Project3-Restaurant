@@ -1,28 +1,24 @@
 import "./style.css";
 import Data from "./menu.json";
 
-const priceProcessor = (value,price) => {
-  if (typeof value.price === "number") {
+const priceProcessor = (value, price) => {
+  function createPrice(classType, header5, header6) {
     const div = document.createElement("div");
-    div.classList.add("single");
+    div.classList.add(classType);
     const h5 = document.createElement("h5");
     const h6 = document.createElement("h6");
-    h5.textContent = "Price";
-    h6.textContent = value.price;
+    h5.textContent = header5;
+    h6.textContent = header6;
     div.appendChild(h5);
     div.appendChild(h6);
     price.appendChild(div);
+  }
+
+  if (typeof value.price === "number") {
+    createPrice("single", "Price", value.price);
   } else {
     value.size.forEach((size) => {
-      const div = document.createElement("div");
-      div.classList.add("multiple");
-      const h5 = document.createElement("h5");
-      const h6 = document.createElement("h6");
-      h5.textContent = size;
-      h6.textContent = value.price[size];
-      div.appendChild(h5);
-      div.appendChild(h6);
-      price.appendChild(div);
+      createPrice("multiple", size, value.price[size]);
     });
   }
 };
@@ -33,16 +29,20 @@ const createCard = (key, values) => {
   values.forEach((value) => {
     const li = document.createElement("li");
     li.id = value.id;
+
     const img = document.createElement("img");
     img.src = value.image_url;
+    li.appendChild(img);
+
     const h2 = document.createElement("h2");
     h2.textContent = value.name;
-    li.appendChild(img);
     li.appendChild(h2);
+
     const price = document.createElement("div");
     price.classList.add("price");
     priceProcessor(value, price);
     li.appendChild(price);
+
     list.appendChild(li);
   });
   return list;
